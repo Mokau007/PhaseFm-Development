@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace PhaseFmApi.Models.Entities;
+
+public partial class Address: IDeletable,ICreatable,IUpdatable
+{
+  public int Id { get; set; }
+
+  public string StreetName { get; set; } = null!;
+
+  public string? ResidentialName { get; set; }
+
+  public string? UnitNumber { get; set; }
+
+  public string Suburb { get; set; } = null!;
+
+  public string City { get; set; } = null!;
+
+  public string Province { get; set; } = null!;
+
+  public string Country { get; set; } = null!;
+
+  public string PostalCode { get; set; } = null!;
+
+  public virtual User IdNavigation { get; set; } = null!;
+  public DateTime? DateUpdated { get; set; }
+  public DateTime DateCreated { get; set; }
+	public bool IsDeleted { get; set; } = false;
+  public DateTime? DateDeleted { get; set; }
+
+  
+}
