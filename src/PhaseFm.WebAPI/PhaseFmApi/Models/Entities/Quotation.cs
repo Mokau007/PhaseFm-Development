@@ -7,7 +7,7 @@ public partial class Quotation : IDeletable, ICreatable, IUpdatable, IEntityPrim
 {
   public int Id { get; set; }
 
-  public DateTime DateCreated { get; set; }
+  public DateTime DateGenerated { get; set; }
 
   public string ClientName { get; set; } = null!;
 

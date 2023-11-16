@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PhaseFmApi.Models.Entities;
 
 public partial class Address: IDeletable,ICreatable,IUpdatable
 {
   public int Id { get; set; }
+
+	[ForeignKey("User")]
+	public int UserId { get; set; }
 
   public string StreetName { get; set; } = null!;
 
@@ -23,7 +27,7 @@ public partial class Address: IDeletable,ICreatable,IUpdatable
 
   public string PostalCode { get; set; } = null!;
 
-  public virtual User IdNavigation { get; set; } = null!;
+  public virtual User User { get; set; } = null!;
   public DateTime? DateUpdated { get; set; }
   public DateTime DateCreated { get; set; }
 	public bool IsDeleted { get; set; } = false;

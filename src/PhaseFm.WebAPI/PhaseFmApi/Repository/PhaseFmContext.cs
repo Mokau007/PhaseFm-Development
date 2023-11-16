@@ -94,8 +94,8 @@ public partial class PhaseFmContext : DbContext
 	  entity.Property(e => e.Id).ValueGeneratedNever();
 	  entity.Property(e => e.PostalCode).HasMaxLength(45);
 
-	  entity.HasOne(d => d.IdNavigation).WithOne(p => p.Address)
-			  .HasForeignKey<Address>(d => d.Id)
+	  entity.HasOne(d => d.User).WithMany(p => p.Addresses)
+			  .HasForeignKey(d => d.UserId)
 			  .OnDelete(DeleteBehavior.ClientSetNull)
 			  .HasConstraintName("FK_address_user");
 	});

@@ -17,9 +17,9 @@ public partial class User : IDeletable, ICreatable, IUpdatable, IEntityPrimaryKe
 
   public string PhoneNumber { get; set; } = null!;
 
-  public virtual Address? Address { get; set; }
+	public virtual ICollection<Address> Addresses { get; set; } = new List<Address>();
 
-  public virtual ICollection<Basket> Baskets { get; set; } = new List<Basket>();
+	public virtual ICollection<Basket> Baskets { get; set; } = new List<Basket>();
 
   public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 
