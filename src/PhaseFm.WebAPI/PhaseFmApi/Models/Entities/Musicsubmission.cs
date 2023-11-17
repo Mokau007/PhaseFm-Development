@@ -23,7 +23,7 @@ public partial class Musicsubmission : IDeletable, ICreatable, IUpdatable, IEnti
 
   public string RecordLabel { get; set; } = null!;
 
-  public DateTime ReleaseDate { get; set; }
+  public DateOnly ReleaseDate { get; set; }
 
   public string Description { get; set; } = null!;
 

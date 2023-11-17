@@ -19,7 +19,7 @@ public partial class Music : IDeletable, ICreatable, IUpdatable, IEntityPrimaryK
 
   public string RecordLabel { get; set; } = null!;
 
-  public DateTime ReleaseDate { get; set; }
+  public DateOnly ReleaseDate { get; set; }
 
   public string FilePath { get; set; } = null!;
 

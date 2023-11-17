@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-//Add CORS service 
+//Configuration of CORS service to enable cross origin requests and data transfers between different browsers and this server
 builder.Services.AddCors(options => options.AddDefaultPolicy(
 	include =>
 	{

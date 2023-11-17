@@ -19,7 +19,7 @@ public partial class Musicrequest : IDeletable, ICreatable, IUpdatable, IEntityP
 
   public string PhoneNumber { get; set; } = null!;
 
-  public DateTime DateRequested { get; set; }
+  public DateOnly DateRequested { get; set; }
 
   public string Description { get; set; } = null!;
 

@@ -7,7 +7,7 @@ public partial class Article : IDeletable, ICreatable, IUpdatable,IEntityPrimary
 {
   public int Id { get; set; }
 
-  public DateTime DateGenerated { get; set; }
+  public DateOnly DateGenerated { get; set; }
 
   public string ArticleContent { get; set; } = null!;
 

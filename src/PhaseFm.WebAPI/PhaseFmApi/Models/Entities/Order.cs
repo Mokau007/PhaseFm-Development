@@ -9,9 +9,11 @@ public partial class Order : IDeletable, ICreatable, IUpdatable, IEntityPrimaryK
 
   public int UserId { get; set; }
 
-  public DateTime Date { get; set; }
+  public DateOnly Date { get; set; }
 
-  public decimal Amount { get; set; }
+	public DateOnly? DeliveryDate { get; set; }
+
+	public decimal Amount { get; set; }
 
   public int OrderStatusId { get; set; }
 

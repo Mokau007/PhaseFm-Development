@@ -11,7 +11,7 @@ public partial class Letter : IDeletable, ICreatable, IUpdatable, IEntityPrimary
 
   public string RecipientLastName { get; set; } = null!;
 
-  public DateTime DateGenerated { get; set; }
+  public DateOnly DateGenerated { get; set; }
 
   public string LetterContent { get; set; } = null!;
 

@@ -11,7 +11,7 @@ public partial class Event : IDeletable, ICreatable, IUpdatable, IEntityPrimaryK
 
   public string Description { get; set; } = null!;
 
-  public DateTime Date { get; set; }
+  public DateOnly Date { get; set; }
 
 	public DateTime? DateUpdated { get; set; }
 	public DateTime DateCreated { get; set; }
