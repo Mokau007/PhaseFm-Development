@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using PhaseFmApi.Extensions;
 using PhaseFmApi.Models.Entities;
 
 namespace PhaseFmApi.Repository;
@@ -16,7 +17,18 @@ public partial class PhaseFmContext : DbContext
   {
   }
 
-  public virtual DbSet<Address> Addresses { get; set; }
+	protected override void ConfigureConventions(ModelConfigurationBuilder builder)
+	{
+
+		builder.Properties<DateOnly>()
+				.HaveConversion<DateOnlyConverter>()
+				.HaveColumnType("date");
+
+		base.ConfigureConventions(builder);
+
+	}
+
+	public virtual DbSet<Address> Addresses { get; set; }
 
   public virtual DbSet<Article> Articles { get; set; }
 
