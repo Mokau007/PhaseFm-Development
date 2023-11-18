@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { PhaseFmShopModule } from './phase-fm-shop/phase-fm-shop.module';
 import { PhaseFmRadioModule } from './phase-fm-radio/phase-fm-radio.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +21,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap:[AppComponent]
 })
 export class AppModule { }

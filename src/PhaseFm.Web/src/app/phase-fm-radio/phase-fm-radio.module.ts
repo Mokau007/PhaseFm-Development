@@ -14,6 +14,8 @@ import { SubmitMusicComponent } from './Features/user-submissions/submit-music/s
 import { MusicRequestComponent } from './Features/user-submissions/music-request/music-request.component';
 import { PhaseFmNavbarComponent } from './Core/phase-fm-navbar/phase-fm-navbar.component';
 import { PhaseFmFooterComponent } from './Core/phase-fm-footer/phase-fm-footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -33,7 +35,10 @@ import { PhaseFmFooterComponent } from './Core/phase-fm-footer/phase-fm-footer.c
   ],
   imports: [
     CommonModule,
-    PhaseFmRadioRoutingModule
+    PhaseFmRadioRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule,
   ]
 })
 export class PhaseFmRadioModule { }
