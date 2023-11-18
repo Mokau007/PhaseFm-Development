@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PhaseFmShopModule } from './phase-fm-shop/phase-fm-shop.module';
 import { PhaseFmRadioModule } from './phase-fm-radio/phase-fm-radio.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { PhaseFmRadioModule } from './phase-fm-radio/phase-fm-radio.module';
     BrowserModule,
     AppRoutingModule,
     PhaseFmShopModule,
-    PhaseFmRadioModule
+    PhaseFmRadioModule,
+    BrowserAnimationsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
