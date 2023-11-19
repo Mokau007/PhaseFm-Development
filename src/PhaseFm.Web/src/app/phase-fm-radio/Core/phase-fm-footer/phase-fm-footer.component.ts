@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./phase-fm-footer.component.scss']
 })
 export class PhaseFmFooterComponent {
-
+  
 }
