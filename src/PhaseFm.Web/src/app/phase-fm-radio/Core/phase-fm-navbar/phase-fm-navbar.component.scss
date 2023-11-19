@@ -14,7 +14,7 @@
 
 .navbar a{
     font-size: larger;
-    color: #324ab2 ;
+    color: #324ab2 !important ;
     font-weight: bold;
 }
 
@@ -88,6 +88,19 @@
 .navbar-toggler span:nth-child(3) {
     transform: translate(0%, 0%) rotate(0deg) ;
 }
+
+
+.placeholder{
+    display: flex;
+    flex-flow: column;
+    height: calc( 100vh - 60px); //viewport height - app-navbar height
+  }
+  .inner-placeholder{
+    flex: 1;// if you want center container large space else will take size of the content or apply flex-basis
+  }
+  app-phase-fm-footer{
+   flex: auto; // up to you
+  }
 
 
 @include media-breakpoint-down(lg) { 
