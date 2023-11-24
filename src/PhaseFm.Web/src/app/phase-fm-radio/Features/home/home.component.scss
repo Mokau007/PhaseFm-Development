@@ -10,3 +10,94 @@
 	-webkit-transition: all 0.2s !important;
 	transition: all 0.2s !important;
 }
+
+.back-up{
+	background-image: url(./../../../../assets/Images/james-kovin-F2h_WbKnX4o-unsplash.jpg);
+	height:400px;
+	background-blend-mode: color-dodge;
+
+}
+
+.banner-image img{
+	width: 100%;
+	height: 400px;
+	opacity: 0.78;
+	
+}
+
+.border-bottom{
+	height: 38px;
+	border-width: thick !important;
+	border-color:  #51007e !important;
+}
+
+#cont span:nth-child(2){  
+	left:7px;  
+	-webkit-animation-delay:.4s;  
+	animation-delay:.4s; 
+  
+  }  
+  #cont span:nth-child(3){  
+	left:14px;  
+	-webkit-animation-delay:.6s;  
+	animation-delay:.6s; 
+  }  
+  #cont span:nth-child(4){  
+	left:21px;  
+	-webkit-animation-delay:.8s;  
+	animation-delay:.8s; 
+  }  
+  #cont span:nth-child(5){  
+	left:28px;  
+	-webkit-animation-delay:1s; 
+	animation-delay:1s; 
+  }  
+  
+  @-webkit-keyframes bodong{  
+	0%{height:5px; background:bule;}  
+	30%{height:15px; background:bule;}  
+	60%{height:20px; background:bule;}  
+	80%{height:15px; background:bule;}  
+	100%{height:5px; background:bule;}  
+  }
+
+  @keyframes bodong{  
+	0%{height:5px; background:bule;}  
+	30%{height:15px; background:bule;}  
+	60%{height:20px; background:bule;}  
+	80%{height:15px; background:bule;}  
+	100%{height:5px; background:bule;}  
+  }
+
+  #cont{  
+	position:relative;
+	top: 30px;
+	left: 10px;
+  }  
+  
+  #cont span{  
+	width:5px;  
+	height: 5px;  
+	bottom:0px;
+	position:absolute;  
+	background:#CCCCFF;  
+	-webkit-animation: bodong 0.5s infinite  ease;  
+	animation: bodong 0.5s infinite  ease;
+  }  
+
+  .image-heading{
+	color: #CCCCFF;
+	display: inline-block;
+	position:absolute;
+	top: 40px;
+	left: 10px;
+  }
+
+  .carousel-inner{
+	height: 100%;
+  }
+
+
+
+
+
