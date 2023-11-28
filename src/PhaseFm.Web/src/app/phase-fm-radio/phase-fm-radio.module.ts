@@ -16,6 +16,7 @@ import { PhaseFmNavbarComponent } from './Core/phase-fm-navbar/phase-fm-navbar.c
 import { PhaseFmFooterComponent } from './Core/phase-fm-footer/phase-fm-footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from './Shared/AngularMaterial/material.module';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
+    MaterialModule,
     
   ]
 })
