@@ -26,11 +26,33 @@
 	
 }
 
+.about-us{
+	padding-top: 10px;
+}
+
+.about-us h1{
+	color: #CCCCFF ;
+}
+
+.about-us p{
+	font-size: large;
+	color: #CCCCFF ;
+}
+
+//heading styling 
 .border-bottom{
 	height: 38px;
 	border-width: thick !important;
 	border-color:  #5B32B3 !important;
 }
+
+//Styling for heading
+.heading{
+	background-color:#5B32B3 ;
+	color: white; 
+    padding-right: 10px; 
+	padding-left: 10px;
+  }
 
 //Animation for the music waves
 
@@ -101,21 +123,41 @@
 	height: 100%;
   }
 
-  .container-on-air{
+  //Column On-Air styling
+  .on-air-col{
 	padding-left: 200px; 
 	width: 40%;
+  }
+
+  .on-air-col img{
+	height: 180px;
   }
 
   .container-latest{
 	padding-left: 100px;
   }
 
-  .heading{
-	background-color:#5B32B3 ;
-	color: white; 
-    padding-right: 10px; 
-	padding-left: 10px;
+  //Latest new section styling
+  .container-latest .card{
+	width: 100%;
+	height: 70%; 
+	flex-direction: row;
+	align-items: center;
+	
   }
+
+  .container-latest h6{
+	font-size: 15.865px;
+	font-weight: bold;
+  }
+
+  .container-latest img{
+	width: 19%; 
+	height: 70%;
+	border-top-right-radius: 0px;
+  }
+
+  
 
 //   .card{
 // 	width: 100%; 
@@ -148,11 +190,15 @@
 
 	
 
-	.content-on-air{
+	.on-air-col{
       padding-left: 23px; 
 	  padding-right: 23px;
       width: 100%;
 	}
+
+	.on-air-col img{
+		height: 250px;
+	  }
 
 	.heading{
 		background-color:#5B32B3 ;
@@ -168,10 +214,30 @@
 	}
 
 	.container-latest{
-		padding-left: 23px; 
+	  padding-left: 23px; 
 	  padding-right: 23px;
       width: 100%;
 	}
+
+	.container-latest .card{
+		width: 100%;
+		height: 80px; 
+		flex-direction: row;
+		align-items: center;
+		font-size: small;
+		
+	}
+
+	.container-latest img{
+		width: 65px; 
+		height: 80px;
+	}
+
+	.container-latest h6{
+	font-size: 15px;
+	font-weight: bold;
+	}
+	
 
 	// .card{
 	// 	width: 100%; 
