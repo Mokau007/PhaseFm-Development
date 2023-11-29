@@ -1,12 +1,262 @@
 
-
+@import url(https://db.onlinewebfonts.com/c/0d39a4e3c36c494c84e2c38618bfed33?family=Publico+Text+Web+Regular); 
 
 .icon-bar {
 	display: block !important;
 	width: 22px !important;
 	height: 2px;
     margin-top: 5px;
-     background-color: purple !important;
+     background-color: #5B32B3 !important;
 	-webkit-transition: all 0.2s !important;
 	transition: all 0.2s !important;
 }
+
+//Styling for the container at the top
+.container-top{
+	background-image: url(./../../../../assets/Images/james-kovin-F2h_WbKnX4o-unsplash.jpg);
+	height:400px;
+	background-blend-mode: color-dodge;
+
+}
+
+.banner-image img{
+	width: 100%;
+	height: 400px;
+	opacity: 0.78;
+	
+}
+
+.about-us{
+	padding-top: 10px;
+}
+
+.about-us h1{
+	color: #CCCCFF ;
+}
+
+.about-us p{
+	font-size: large;
+	color: #CCCCFF ;
+}
+
+//heading styling 
+.border-bottom{
+	height: 38px;
+	border-width: thick !important;
+	border-color:  #5B32B3 !important;
+}
+
+//Styling for heading
+.heading{
+	background-color:#5B32B3 ;
+	color: white; 
+    padding-right: 10px; 
+	padding-left: 10px;
+  }
+
+//Animation for the music waves
+
+#cont span:nth-child(2){  
+	left:7px;  
+	-webkit-animation-delay:.4s;  
+	animation-delay:.4s; 
+  
+  }  
+  #cont span:nth-child(3){  
+	left:14px;  
+	-webkit-animation-delay:.6s;  
+	animation-delay:.6s; 
+  }  
+  #cont span:nth-child(4){  
+	left:21px;  
+	-webkit-animation-delay:.8s;  
+	animation-delay:.8s; 
+  }
+
+  #cont span:nth-child(5){  
+	left:28px;  
+	-webkit-animation-delay:1s; 
+	animation-delay:1s; 
+  }  
+  
+  @-webkit-keyframes bodong{  
+	0%{height:5px; background:bule;}  
+	30%{height:15px; background:bule;}  
+	60%{height:20px; background:bule;}  
+	80%{height:15px; background:bule;}  
+	100%{height:5px; background:bule;}  
+  }
+
+  @keyframes bodong{  
+	0%{height:5px; background:bule;}  
+	30%{height:15px; background:bule;}  
+	60%{height:20px; background:bule;}  
+	80%{height:15px; background:bule;}  
+	100%{height:5px; background:bule;}  
+  }
+
+  #cont{  
+	position:relative;
+	top: 30px;
+	left: 10px;
+  }  
+  
+  #cont span{  
+	width:5px;  
+	height: 5px;  
+	bottom:0px;
+	position:absolute;  
+	background:#CCCCFF;  
+	-webkit-animation: bodong 0.5s infinite  ease;  
+	animation: bodong 0.5s infinite  ease;
+  }  
+
+  .image-heading{
+	color: #CCCCFF;
+	display: inline-block;
+	position:absolute;
+	top: 40px;
+	left: 10px;
+  }
+
+  .carousel-inner{
+	height: 100%;
+  }
+
+  //Column On-Air styling
+  .on-air-col{
+	padding-left: 200px; 
+	width: 40%;
+  }
+
+  .on-air-col img{
+	height: 180px;
+  }
+
+  .container-latest{
+	padding-left: 100px;
+  }
+
+  //Latest new section styling
+  .container-latest .card{
+	width: 100%;
+	height: 70%; 
+	flex-direction: row;
+	align-items: center;
+	
+  }
+
+  .container-latest h6{
+	font-size: 15.865px;
+	font-weight: bold;
+  }
+
+  .container-latest img{
+	width: 19%; 
+	height: 70%;
+	border-top-right-radius: 0px;
+  }
+
+  
+
+//   .card{
+// 	width: 100%; 
+// 	height: 30%; 
+// 	flex-direction: row;
+// 	align-items: center;
+//   }
+
+//   .card-img-top{
+// 	width: 30%; 
+// 	height: 100%;
+//   }
+
+
+  @media (min-width: 337px) and (max-width: 991.98px) { 
+
+	.container-top{
+		background-image: url(./../../../../assets/Images/james-kovin-F2h_WbKnX4o-unsplash.jpg);
+		height:700px;
+		background-blend-mode: color-dodge;
+	
+	}
+
+	.banner-image img{
+		width: 100%;
+		height: 300px;
+		opacity: 0.78;
+		
+	}
+
+	
+
+	.on-air-col{
+      padding-left: 23px; 
+	  padding-right: 23px;
+      width: 100%;
+	}
+
+	.on-air-col img{
+		height: 250px;
+	  }
+
+	.heading{
+		background-color:#5B32B3 ;
+		color: white; 
+		padding-right: 10px; 
+		padding-left: 10px;
+	  }
+
+	  .border-bottom{
+		height: 30px;
+		border-width: thick !important;
+		border-color:  #5B32B3 !important;
+	}
+
+	.container-latest{
+	  padding-left: 23px; 
+	  padding-right: 23px;
+      width: 100%;
+	}
+
+	.container-latest .card{
+		width: 100%;
+		height: 80px; 
+		flex-direction: row;
+		align-items: center;
+		font-size: small;
+		
+	}
+
+	.container-latest img{
+		width: 65px; 
+		height: 80px;
+	}
+
+	.container-latest h6{
+	font-size: 15px;
+	font-weight: bold;
+	}
+	
+
+	// .card{
+	// 	width: 100%; 
+	// 	height: 40%; 
+	// 	flex-direction: row;
+	// 	align-items: center;
+	//   }
+
+	// .card-img-top{
+	// 	width: 100%; 
+	// 	height: 100px;
+	// }
+
+	// .about-us{
+
+	// }
+
+   }
+
+
+
+
