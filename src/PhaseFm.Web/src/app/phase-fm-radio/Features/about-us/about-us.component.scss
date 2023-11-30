@@ -1,0 +1,88 @@
+
+.about-container{
+    padding-left: 70px;
+    
+}
+
+.about-container p{
+    font-size: medium;
+}
+
+.img-content{
+    width: 60%;
+    height: 66%;
+    border-radius: 20px 20px 20px  20px;
+}
+
+
+//heading styling 
+.border-bottom{
+	height: 38px;
+	border-width: thick !important;
+	border-color:  #5B32B3 !important;
+}
+
+//Styling for heading
+.heading{
+	background-color:#5B32B3 ;
+	color: white; 
+    padding-right: 10px; 
+	padding-left: 10px;
+ }
+
+ .mission-container{
+    padding-left: 75px;
+ }
+
+ .vision-container{
+    padding-right: 75px;
+ }
+
+ .services-container{
+    padding-left: 60px;
+    padding-right: 60px;
+ }
+
+ .img-service{
+    width: 40%;
+    height: 20%;
+ }
+
+ @media (min-width: 337px) and (max-width: 991.98px){
+    //for the heading tyle
+	  .border-bottom{
+		height: 30px;
+		border-width: thick !important;
+		border-color:  #5B32B3 !important;
+	}
+
+    .about-container{
+      padding-left: 23px; 
+	  padding-right: 23px;
+      width: 100%;
+	}
+
+    .about-img-cont{
+        padding-left: 40px; 
+    }
+
+    .mission-container{
+        padding-left: 27px; 
+        padding-right: 23px;
+        width: 100%;
+    }
+
+    .vision-container{
+        padding-left: 27px; 
+        padding-right: 23px;
+        width: 100%;
+    }
+
+    .services-container{
+        padding-left: 20px; 
+        padding-right: 23px;
+        width: 100%;
+    }
+
+
+ }
