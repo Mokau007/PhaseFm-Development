@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PhaseFmNavbarComponent } from './Core/phase-fm-navbar/phase-fm-navbar.component';
 import { HomeComponent } from './Features/home/home.component';
 import { AboutUsComponent } from './Features/about-us/about-us.component';
+import { NavbarComponent } from '../phase-fm-shop/Core/navbar/navbar.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,9 @@ const routes: Routes = [
       { path:'about-us', component: AboutUsComponent},
     ],
   },
+  {
+    path:'shop', component: NavbarComponent
+  }
 ];
 
 @NgModule({
