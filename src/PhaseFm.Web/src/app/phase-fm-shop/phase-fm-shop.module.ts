@@ -22,6 +22,7 @@ import { OrderManagementTabsComponent } from './Features/order-management/order-
 import { OrderDetailsComponent } from './Features/order-management/order-details/order-details.component';
 import { NavbarComponent } from './Core/navbar/navbar.component';
 import { FooterComponent } from './Core/footer/footer.component';
+import { MaterialModule } from '../phase-fm-radio/Shared/AngularMaterial/material.module';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { FooterComponent } from './Core/footer/footer.component';
   ],
   imports: [
     CommonModule,
-    PhaseFmShopRoutingModule
+    PhaseFmShopRoutingModule,
+    MaterialModule
   ]
 })
 export class PhaseFmShopModule { }
