@@ -23,6 +23,7 @@ import { OrderDetailsComponent } from './Features/order-management/order-details
 import { NavbarComponent } from './Core/navbar/navbar.component';
 import { FooterComponent } from './Core/footer/footer.component';
 import { MaterialModule } from '../phase-fm-radio/Shared/AngularMaterial/material.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { MaterialModule } from '../phase-fm-radio/Shared/AngularMaterial/materia
   imports: [
     CommonModule,
     PhaseFmShopRoutingModule,
-    MaterialModule
+    MaterialModule,
+    NgbModule,
   ]
 })
 export class PhaseFmShopModule { }
