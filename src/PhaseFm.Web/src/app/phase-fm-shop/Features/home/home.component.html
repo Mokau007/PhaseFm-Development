@@ -1,1 +1,78 @@
-<p>home works!</p>
+<div class="content-body">
+
+    <div class="row">
+
+        <ngb-carousel [interval]="6000" [pauseOnHover]="false" [showNavigationArrows]="false">
+
+            <ng-template ngbSlide >
+              <div class="carousel-wrapper">
+                <img src="../../../../assets/Images/andy-hermawan-uFdCDgnoNVI-unsplash.jpg" height="350" width="100%" [alt]="">
+               
+                <div class="caption different-title">
+                    <h3 style="font-weight: bolder; font-size:40px;">
+                        Welcome
+                    </h3>
+
+                    <h3 style="font-weight: bolder; font-size:40px;">
+                        Let us Connect you
+                    </h3>
+                    <h3 style="font-weight: bolder; font-size:40px; color: black;">
+                        To products that align with your needs
+                    </h3>
+                    <a routerLink="/shop/products" class="btn flores-button secondary-btn rounded-0" style="background-color: black;color: white;">Shop Collection</a>
+                </div>
+                
+              </div>
+            </ng-template>
+        </ngb-carousel>
+      
+    </div>
+
+    <div class="row pl-4 pt-4">
+        <h3 class="text-center">
+            <span style="color: #324ab2 ;"> Featured </span> Products
+        </h3>
+
+       
+
+        
+           
+        
+        
+
+        <div class="container">
+            <div class="col-lg-3 pb-3">
+                <div class="card shadow-lg" style="width: 17rem; ">
+                    <img class="card-img-top image-fluid" style="min-height: 1px; "  src="../../../../../assets/Images/Untitled.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                      <h6 class="card-title text-center pb-3" >Poster for bedroom xs wall</h6>
+                      <div class="text-center pb-3">
+                        <i class="fa fa-star star"></i>
+                        <i class="fa fa-star star"></i>
+                        <i class="fa fa-star star"></i>
+                        <i class="fa fa-star star"></i>
+                     </div>
+                      <h4 class="card-subtitle text-muted text-center pb-3">  
+                        <b> R450.00</b>
+                      </h4>
+                      
+                      <a href="#" style=" background-color: blueviolet ; color: black; display: block;" class="btn btn-primary mb-3">More Details</a>
+    
+                      <a href="#" style=" background-color: greenyellow ; color: black; display: block;" class="btn btn-primary mb-3">Add To Cart</a>
+    
+                    </div>
+                  </div>
+                  
+            </div>
+        </div>
+        
+
+        
+    </div>
+
+    <div class="row">
+        <h3>
+            Popular Products
+        </h3>
+    </div>
+</div>

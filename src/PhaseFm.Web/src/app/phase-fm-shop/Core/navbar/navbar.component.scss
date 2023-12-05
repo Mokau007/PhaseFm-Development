@@ -1,0 +1,169 @@
+@import 'bootstrap/scss/bootstrap';
+
+.navbar{
+    z-index: 999;
+    color: #CCCCFF ;
+}
+
+.navbar-brand {
+	position: relative;
+	left:-200px;
+	padding: 0px 0px ;
+	mix-blend-mode: multiply;   
+}
+
+.navbar a{
+    font-size: larger;
+    color: #324ab2 !important ;
+    font-weight: bold;
+}
+
+.navbar a:hover{
+    // background-color: #CCCCFF;
+    border-bottom: black;
+    color:black !important;
+	border-radius: 7px;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btnToggle {
+	border: none ;
+}
+
+.navbar .icon-bar {
+	display: block;
+    background-color:  	#51007e;
+    height: 3px;
+    width: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 0.35s ease-out;
+    transform-origin: center left;
+}
+
+
+/* top line needs a little padding */
+.navbar-toggler span:nth-child(1) {
+    margin-top: 0.3em;
+}
+
+/**
+ * Animate collapse into X.
+ */
+
+/* top line rotates 45 degrees clockwise and moves up and in a bit to close the center of the X in the center of the button */
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: translate(15%, -33%) rotate(45deg);
+}
+/* center line goes transparent */
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
+}
+/* bottom line rotates 45 degrees counter clockwise, in, and down a bit to close the center of the X in the center of the button  */
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: translate(15%, 33%) rotate(-45deg) ;
+}
+
+
+/**
+ * Animate collapse open into hamburger menu
+ */
+
+/* top line moves back to initial position and rotates back to 0 degrees */
+.navbar-toggler span:nth-child(1) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+/* middle line goes back to regular color and opacity */
+.navbar-toggler span:nth-child(2) {
+    opacity: 1;
+}
+/* bottom line goes back to initial position and rotates back to 0 degrees */
+.navbar-toggler span:nth-child(3) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+
+
+.placeholder{
+    display: flex;
+    flex-flow: column;
+    height: calc( 100vh - 60px); //viewport height - app-navbar height
+  }
+  .inner-placeholder{
+    flex: 1;// if you want center container large space else will take size of the content or apply flex-basis
+  }
+//   app-phase-fm-footer{
+//    flex: auto; // up to you
+//   }
+
+.cart{
+    color: black;
+    transform: scale(1.8);
+}
+
+// .account-icon{
+//     color: black;
+//     position: absolute;
+
+//     right: 200px;
+// }
+
+.cart-icon{
+    position: relative;
+
+    left: 70%
+}
+
+
+@media (min-width: 320px) and (max-width: 480px)  {
+    .cart-icon{
+        position: relative;
+        left: 4%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px)  {
+    .cart-icon{
+        position: relative;
+        left: 4%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px)  {
+    .navbar{
+       padding-top: 50px !important;
+    }
+
+    .cart-icon{
+        position: absolute;
+        left: 35%;
+        bottom: 60px;
+    }
+
+    .account-icon{
+        position: absolute;
+      
+        bottom: 84px;
+    }
+    
+}
+
+@include media-breakpoint-down(lg) { 
+	.navbar-brand {
+		position: relative;
+		left:-20px;
+		padding: 0px 0px ;
+		mix-blend-mode: multiply;   
+	}
+}
+
+
+
