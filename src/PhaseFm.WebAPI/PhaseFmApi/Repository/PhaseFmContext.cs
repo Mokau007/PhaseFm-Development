@@ -28,6 +28,10 @@ public partial class PhaseFmContext : DbContext
 
 	}
 
+  public virtual DbSet<Size> Sizes { get; set; }
+
+	public virtual DbSet<ProductSize> ProductSize { get; set; }
+
 	public virtual DbSet<Address> Addresses { get; set; }
 
   public virtual DbSet<Article> Articles { get; set; }

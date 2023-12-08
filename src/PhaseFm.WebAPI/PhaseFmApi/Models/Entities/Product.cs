@@ -31,6 +31,9 @@ public partial class Product : IDeletable, ICreatable, IUpdatable, IEntityPrimar
 
   public virtual ICollection<ProductColor> Productcolors { get; set; } = new List<ProductColor>();
 
+	public virtual ICollection<ProductSize> ProductSizes { get; set; } = new List<ProductSize>();
+
+
 	public DateTime? DateUpdated { get; set; }
 	public DateTime DateCreated { get; set; }
 	public bool IsDeleted { get; set; } = false;
