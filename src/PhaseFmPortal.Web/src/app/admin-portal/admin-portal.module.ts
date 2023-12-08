@@ -39,8 +39,7 @@ import { ViewUsersComponent } from './Features/account-management/view-users/vie
 import { AddUserComponent } from './Features/account-management/add-user/add-user.component';
 import { EditUserComponent } from './Features/account-management/edit-user/edit-user.component';
 import { DeleteUserComponent } from './Features/account-management/delete-user/delete-user.component';
-import { CrudEventComponent } from './Features/radio-subsystem/crud-event/crud-event.component';
-import { CrudShowComponent } from './Features/radio-subsystem/crud-show/crud-show.component';
+
 import { ViewMusicSubmissionComponent } from './Features/radio-subsystem/music-submission/view-music-submission/view-music-submission.component';
 import { ApproveMusicSubmissionComponent } from './Features/radio-subsystem/music-submission/approve-music-submission/approve-music-submission.component';
 import { RejectMusicSubmissionComponent } from './Features/radio-subsystem/music-submission/reject-music-submission/reject-music-submission.component';
@@ -60,12 +59,11 @@ import { DeleteArticleComponent } from './Features/radio-subsystem/crud-news/del
 import { EditArticleComponent } from './Features/radio-subsystem/crud-news/edit-article/edit-article.component';
 import { ViewArticlesComponent } from './Features/radio-subsystem/crud-news/view-articles/view-articles.component';
 import { AddShowComponent } from './Features/radio-subsystem/crud-show/add-show/add-show.component';
-import { EditHowComponent } from './Features/radio-subsystem/crud-show/edit-how/edit-how.component';
-import { EditShowsComponent } from './Features/radio-subsystem/crud-show/edit-shows/edit-shows.component';
-import { DeleteShowsComponent } from './Features/radio-subsystem/crud-show/delete-shows/delete-shows.component';
 import { DeleteShowComponent } from './Features/radio-subsystem/crud-show/delete-show/delete-show.component';
 import { ViewShowsComponent } from './Features/radio-subsystem/crud-show/view-shows/view-shows.component';
 import { EditShowComponent } from './Features/radio-subsystem/crud-show/edit-show/edit-show.component';
+import { MaterialModule } from './Shared/AngularMaterial/material.module';
+
 
 
 @NgModule({
@@ -107,8 +105,6 @@ import { EditShowComponent } from './Features/radio-subsystem/crud-show/edit-sho
     AddUserComponent,
     EditUserComponent,
     DeleteUserComponent,
-    CrudEventComponent,
-    CrudShowComponent,
     ViewMusicSubmissionComponent,
     ApproveMusicSubmissionComponent,
     RejectMusicSubmissionComponent,
@@ -128,16 +124,15 @@ import { EditShowComponent } from './Features/radio-subsystem/crud-show/edit-sho
     EditArticleComponent,
     ViewArticlesComponent,
     AddShowComponent,
-    EditHowComponent,
-    EditShowsComponent,
-    DeleteShowsComponent,
     DeleteShowComponent,
     ViewShowsComponent,
     EditShowComponent
   ],
   imports: [
     CommonModule,
-    AdminPortalRoutingModule
+    AdminPortalRoutingModule,
+    MaterialModule,
+    
   ]
 })
 export class AdminPortalModule { }
