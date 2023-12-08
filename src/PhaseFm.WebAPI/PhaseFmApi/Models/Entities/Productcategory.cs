@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PhaseFmApi.Models.Entities;
 
-public partial class Productcategory : IDeletable, ICreatable, IUpdatable, IEntityPrimaryKey
+public partial class ProductCategory : IDeletable, ICreatable, IUpdatable, IEntityPrimaryKey
 {
   public int Id { get; set; }
 
@@ -13,7 +13,7 @@ public partial class Productcategory : IDeletable, ICreatable, IUpdatable, IEnti
 
   public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 
-  public virtual ICollection<Producttype> Producttypes { get; set; } = new List<Producttype>();
+  public virtual ICollection<ProductType> Producttypes { get; set; } = new List<ProductType>();
 
 	public DateTime? DateUpdated { get; set; }
 	public DateTime DateCreated { get; set; }

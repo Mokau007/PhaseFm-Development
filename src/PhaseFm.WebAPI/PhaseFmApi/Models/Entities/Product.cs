@@ -25,11 +25,11 @@ public partial class Product : IDeletable, ICreatable, IUpdatable, IEntityPrimar
 
   public virtual ICollection<Orderline> Orderlines { get; set; } = new List<Orderline>();
 
-  public virtual Productcategory ProductCategory { get; set; } = null!;
+  public virtual ProductCategory ProductCategory { get; set; } = null!;
 
-  public virtual Producttype ProductType { get; set; } = null!;
+  public virtual ProductType ProductType { get; set; } = null!;
 
-  public virtual ICollection<Productcolor> Productcolors { get; set; } = new List<Productcolor>();
+  public virtual ICollection<ProductColor> Productcolors { get; set; } = new List<ProductColor>();
 
 	public DateTime? DateUpdated { get; set; }
 	public DateTime DateCreated { get; set; }

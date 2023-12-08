@@ -9,7 +9,7 @@ public partial class Radio : IDeletable, ICreatable, IUpdatable, IEntityPrimaryK
 
   public string Day { get; set; } = null!;
 
-  public virtual ICollection<Radioshow> Radioshows { get; set; } = new List<Radioshow>();
+  public virtual ICollection<RadioShow> Radioshows { get; set; } = new List<RadioShow>();
 
 	public DateTime? DateUpdated { get; set; }
 	public DateTime DateCreated { get; set; }

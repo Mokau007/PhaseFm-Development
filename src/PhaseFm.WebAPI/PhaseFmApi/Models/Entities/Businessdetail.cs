@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PhaseFmApi.Models.Entities;
 
-public partial class Businessdetail : IDeletable, ICreatable, IUpdatable, IEntityPrimaryKey
+public partial class BusinessDetail : IDeletable, ICreatable, IUpdatable, IEntityPrimaryKey
 {
   public int Id { get; set; }
 

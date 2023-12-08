@@ -34,7 +34,7 @@ public partial class PhaseFmContext : DbContext
 
   public virtual DbSet<Basket> Baskets { get; set; }
 
-  public virtual DbSet<Businessdetail> Businessdetails { get; set; }
+  public virtual DbSet<BusinessDetail> Businessdetails { get; set; }
 
   public virtual DbSet<Color> Colors { get; set; }
 
@@ -44,7 +44,7 @@ public partial class PhaseFmContext : DbContext
 
   public virtual DbSet<Employee> Employees { get; set; }
 
-  public virtual DbSet<Employeetype> Employeetypes { get; set; }
+  public virtual DbSet<EmployeeType> Employeetypes { get; set; }
 
   public virtual DbSet<Event> Events { get; set; }
 
@@ -52,33 +52,33 @@ public partial class PhaseFmContext : DbContext
 
   public virtual DbSet<Music> Musics { get; set; }
 
-  public virtual DbSet<Musicrequest> Musicrequests { get; set; }
+  public virtual DbSet<MusicRequest> Musicrequests { get; set; }
 
-  public virtual DbSet<Musicrequeststatus> Musicrequeststatuses { get; set; }
+  public virtual DbSet<MusicRequestStatus> Musicrequeststatuses { get; set; }
 
-  public virtual DbSet<Musicsubmission> Musicsubmissions { get; set; }
+  public virtual DbSet<MusicSubmission> Musicsubmissions { get; set; }
 
-  public virtual DbSet<Musicsubmissionstatus> Musicsubmissionstatuses { get; set; }
+  public virtual DbSet<MusicSubmissionStatus> Musicsubmissionstatuses { get; set; }
 
   public virtual DbSet<Order> Orders { get; set; }
 
   public virtual DbSet<Orderline> Orderlines { get; set; }
 
-  public virtual DbSet<Orderreceivedstatus> Orderreceivedstatuses { get; set; }
+  public virtual DbSet<OrderReceivedStatus> Orderreceivedstatuses { get; set; }
 
-  public virtual DbSet<Orderstatus> Orderstatuses { get; set; }
+  public virtual DbSet<OrderStatus> Orderstatuses { get; set; }
 
   public virtual DbSet<Playlist> Playlists { get; set; }
 
-  public virtual DbSet<Playlistmusic> Playlistmusics { get; set; }
+  public virtual DbSet<PlayListMusic> Playlistmusics { get; set; }
 
   public virtual DbSet<Product> Products { get; set; }
 
-  public virtual DbSet<Productcategory> Productcategories { get; set; }
+  public virtual DbSet<ProductCategory> Productcategories { get; set; }
 
-  public virtual DbSet<Productcolor> Productcolors { get; set; }
+  public virtual DbSet<ProductColor> Productcolors { get; set; }
 
-  public virtual DbSet<Producttype> Producttypes { get; set; }
+  public virtual DbSet<ProductType> Producttypes { get; set; }
 
   public virtual DbSet<Quotation> Quotations { get; set; }
 
@@ -86,7 +86,7 @@ public partial class PhaseFmContext : DbContext
 
   public virtual DbSet<Radio> Radios { get; set; }
 
-  public virtual DbSet<Radioshow> Radioshows { get; set; }
+  public virtual DbSet<RadioShow> Radioshows { get; set; }
 
   public virtual DbSet<Show> Shows { get; set; }
 
@@ -141,7 +141,7 @@ public partial class PhaseFmContext : DbContext
 			  .HasConstraintName("FK_basket_user");
 	});
 
-	modelBuilder.Entity<Businessdetail>(entity =>
+	modelBuilder.Entity<BusinessDetail>(entity =>
 	{
 	  entity.HasKey(e => e.Id).HasName("PK_businessdetail_Id");
 
@@ -198,7 +198,7 @@ public partial class PhaseFmContext : DbContext
 			  .HasConstraintName("FK_employee_employeetype");
 	});
 
-	modelBuilder.Entity<Employeetype>(entity =>
+	modelBuilder.Entity<EmployeeType>(entity =>
 	{
 	  entity.HasKey(e => e.Id).HasName("PK_employeetype_Id");
 
@@ -248,7 +248,7 @@ public partial class PhaseFmContext : DbContext
 	  entity.Property(e => e.SongName).HasMaxLength(1000);
 	});
 
-	modelBuilder.Entity<Musicrequest>(entity =>
+	modelBuilder.Entity<MusicRequest>(entity =>
 	{
 	  entity.HasKey(e => e.Id).HasName("PK_musicrequest_Id");
 
@@ -268,7 +268,7 @@ public partial class PhaseFmContext : DbContext
 			  .HasConstraintName("FK_musicrequest_musicrequeststatus");
 	});
 
-	modelBuilder.Entity<Musicrequeststatus>(entity =>
+	modelBuilder.Entity<MusicRequestStatus>(entity =>
 	{
 	  entity.HasKey(e => e.Id).HasName("PK_musicrequeststatus_Id");
 
@@ -279,7 +279,7 @@ public partial class PhaseFmContext : DbContext
 	  entity.Property(e => e.Name).HasMaxLength(1000);
 	});
 
-	modelBuilder.Entity<Musicsubmission>(entity =>
+	modelBuilder.Entity<MusicSubmission>(entity =>
 	{
 	  entity.HasKey(e => e.Id).HasName("PK_musicsubmission_Id");
 
@@ -302,7 +302,7 @@ public partial class PhaseFmContext : DbContext
 			  .HasConstraintName("FK_musicsubmission_musicsubmissionstatus");
 	});
 
-	modelBuilder.Entity<Musicsubmissionstatus>(entity =>
+	modelBuilder.Entity<MusicSubmissionStatus>(entity =>
 	{
 	  entity.HasKey(e => e.Id).HasName("PK_musicsubmissionstatus_Id");
 
@@ -353,7 +353,7 @@ public partial class PhaseFmContext : DbContext
 			  .HasConstraintName("FK_orderline_product");
 	});
 
-	modelBuilder.Entity<Orderreceivedstatus>(entity =>
+	modelBuilder.Entity<OrderReceivedStatus>(entity =>
 	{
 	  entity.HasKey(e => e.Id).HasName("PK_orderreceivedstatus_Id");
 
@@ -363,7 +363,7 @@ public partial class PhaseFmContext : DbContext
 	  entity.Property(e => e.Name).HasMaxLength(1000);
 	});
 
-	modelBuilder.Entity<Orderstatus>(entity =>
+	modelBuilder.Entity<OrderStatus>(entity =>
 	{
 	  entity.HasKey(e => e.Id).HasName("PK_orderstatus_Id");
 
@@ -382,7 +382,7 @@ public partial class PhaseFmContext : DbContext
 	  entity.Property(e => e.Id).ValueGeneratedNever();
 	});
 
-	modelBuilder.Entity<Playlistmusic>(entity =>
+	modelBuilder.Entity<PlayListMusic>(entity =>
 	{
 	  entity.HasKey(e => e.Id).HasName("PK_playlistmusic_Id");
 
@@ -422,7 +422,7 @@ public partial class PhaseFmContext : DbContext
 			  .HasConstraintName("FK_product_producttype");
 	});
 
-	modelBuilder.Entity<Productcategory>(entity =>
+	modelBuilder.Entity<ProductCategory>(entity =>
 	{
 	  entity.HasKey(e => e.Id).HasName("PK_productcategory_Id");
 
@@ -432,7 +432,7 @@ public partial class PhaseFmContext : DbContext
 	  entity.Property(e => e.Name).HasMaxLength(1000);
 	});
 
-	modelBuilder.Entity<Productcolor>(entity =>
+	modelBuilder.Entity<ProductColor>(entity =>
 	{
 	  entity.HasKey(e => e.Id).HasName("PK_productcolor_Id");
 
@@ -451,7 +451,7 @@ public partial class PhaseFmContext : DbContext
 			  .HasConstraintName("FK_productcolor_product");
 	});
 
-	modelBuilder.Entity<Producttype>(entity =>
+	modelBuilder.Entity<ProductType>(entity =>
 	{
 	  entity.HasKey(e => e.Id).HasName("PK_producttype_Id");
 
@@ -501,7 +501,7 @@ public partial class PhaseFmContext : DbContext
 	  entity.Property(e => e.Day).HasMaxLength(45);
 	});
 
-	modelBuilder.Entity<Radioshow>(entity =>
+	modelBuilder.Entity<RadioShow>(entity =>
 	{
 	  entity.HasKey(e => e.Id).HasName("PK_radioshow_Id");
 

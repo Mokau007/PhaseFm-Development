@@ -23,7 +23,7 @@ public partial class Music : IDeletable, ICreatable, IUpdatable, IEntityPrimaryK
 
   public string FilePath { get; set; } = null!;
 
-  public virtual ICollection<Playlistmusic> Playlistmusics { get; set; } = new List<Playlistmusic>();
+  public virtual ICollection<PlayListMusic> Playlistmusics { get; set; } = new List<PlayListMusic>();
 
 	public DateTime? DateUpdated { get; set; }
 	public DateTime DateCreated { get; set; }

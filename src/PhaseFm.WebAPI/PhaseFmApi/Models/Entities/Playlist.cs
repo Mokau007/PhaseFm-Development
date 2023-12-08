@@ -11,7 +11,7 @@ public partial class Playlist : IDeletable, ICreatable, IUpdatable, IEntityPrima
 
   public string Description { get; set; } = null!;
 
-  public virtual ICollection<Playlistmusic> Playlistmusics { get; set; } = new List<Playlistmusic>();
+  public virtual ICollection<PlayListMusic> Playlistmusics { get; set; } = new List<PlayListMusic>();
 
 	public DateTime? DateUpdated { get; set; }
 	public DateTime DateCreated { get; set; }

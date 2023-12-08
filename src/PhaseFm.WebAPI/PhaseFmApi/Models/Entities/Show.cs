@@ -15,7 +15,7 @@ public partial class Show : IDeletable, ICreatable, IUpdatable, IEntityPrimaryKe
 
   public TimeSpan EndTime { get; set; }
 
-  public virtual ICollection<Radioshow> Radioshows { get; set; } = new List<Radioshow>();
+  public virtual ICollection<RadioShow> Radioshows { get; set; } = new List<RadioShow>();
 
 	public DateTime? DateUpdated { get; set; }
 	public DateTime DateCreated { get; set; }

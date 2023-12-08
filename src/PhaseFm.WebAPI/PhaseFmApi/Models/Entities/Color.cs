@@ -9,7 +9,7 @@ public partial class Color : IDeletable, ICreatable, IUpdatable, IEntityPrimaryK
 
   public string Name { get; set; } = null!;
 
-  public virtual ICollection<Productcolor> Productcolors { get; set; } = new List<Productcolor>();
+  public virtual ICollection<ProductColor> Productcolors { get; set; } = new List<ProductColor>();
 
 	public DateTime? DateUpdated { get; set; }
 	public DateTime DateCreated { get; set; }

@@ -19,7 +19,7 @@ public partial class Employee : IDeletable, ICreatable, IUpdatable, IEntityPrima
 
   public string Address { get; set; } = null!;
 
-  public virtual Employeetype EmployeeType { get; set; } = null!;
+  public virtual EmployeeType EmployeeType { get; set; } = null!;
 
 	public DateTime? DateUpdated { get; set; }
 	public DateTime DateCreated { get; set; }

@@ -19,9 +19,9 @@ public partial class Order : IDeletable, ICreatable, IUpdatable, IEntityPrimaryK
 
   public int OrderReceivedStatusId { get; set; }
 
-  public virtual Orderreceivedstatus OrderReceivedStatus { get; set; } = null!;
+  public virtual OrderReceivedStatus OrderReceivedStatus { get; set; } = null!;
 
-  public virtual Orderstatus OrderStatus { get; set; } = null!;
+  public virtual OrderStatus OrderStatus { get; set; } = null!;
 
   public virtual User User { get; set; } = null!;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PhaseFmApi.Models.Entities;
 
-public partial class Musicrequest : IDeletable, ICreatable, IUpdatable, IEntityPrimaryKey
+public partial class MusicRequest : IDeletable, ICreatable, IUpdatable, IEntityPrimaryKey
 {
   public int Id { get; set; }
 
@@ -25,7 +25,7 @@ public partial class Musicrequest : IDeletable, ICreatable, IUpdatable, IEntityP
 
   public string SongName { get; set; } = null!;
 
-  public virtual Musicrequeststatus Status { get; set; } = null!;
+  public virtual MusicRequestStatus Status { get; set; } = null!;
 
 	public DateTime? DateUpdated { get; set; }
 	public DateTime DateCreated { get; set; }

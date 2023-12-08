@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PhaseFmApi.Models.Entities;
 
-public partial class Orderstatus : IDeletable, ICreatable, IUpdatable, IEntityPrimaryKey
+public partial class OrderStatus : IDeletable, ICreatable, IUpdatable, IEntityPrimaryKey
 {
   public int Id { get; set; }
 
