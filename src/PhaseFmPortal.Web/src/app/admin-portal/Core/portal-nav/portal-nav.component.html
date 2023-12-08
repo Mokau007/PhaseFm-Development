@@ -1,0 +1,211 @@
+<mat-toolbar > 
+    <mat-toolbar-row>
+      <button mat-button (click)="opened=!opened"><mat-icon>menu</mat-icon> </button>
+      <h2 style="font-weight: 700; font-family: 'Times New Roman', Times, serif;">Phase-Fm Portal</h2>
+    
+      <div class="e"  style="left:69%;position: relative;">
+        <img src="../../../../assets/images/mokaump.jpg" alt="Avatar" class="avatar"> Mokau Masemola
+      </div>
+     
+      
+
+     
+      <!-- <button mat-button [matMenuTriggerFor]="menu" class="top" style="margin-left: 50%;" class ="top"><mat-icon>account_circle</mat-icon>MenKa Account</button>
+  <mat-menu #menu="matMenu">
+      <button mat-menu-item>View Account</button>
+      <button mat-menu-item>Item 2</button>
+  </mat-menu> -->
+    </mat-toolbar-row>
+</mat-toolbar>
+    
+    <mat-sidenav-container>
+      <mat-sidenav [opened]="opened" mode="side">
+
+        <!-- Dashboard Accordion -->
+        <mat-accordion>
+          
+          <mat-expansion-panel >
+
+            <mat-expansion-panel-header class="header-color">
+
+              <mat-panel-title>
+                <i class="fa fa-line-chart"  aria-hidden="true"></i> 
+                 Dashboard
+              </mat-panel-title>
+
+            </mat-expansion-panel-header>
+
+            <mat-list>
+              <mat-list-item style="align-items: center;" >
+                <!-- <mat-icon fontIcon="home" style="display:contents; align-items: center;"></mat-icon> -->
+                <!-- <a routerLink="/dashboard" style="text-decoration: double;align-items: center;"class="navbar-link"> Dashboard </a> -->
+                <a routerLink="/dashboard" class="navbar-link "> Radio Dashboard  </a>
+              </mat-list-item >
+
+              <mat-list-item style="align-items: center;" >
+                <!-- <mat-icon fontIcon="home" style="display:contents; align-items: center;"></mat-icon> -->
+                <!-- <a routerLink="/dashboard" style="text-decoration: double;align-items: center;"class="navbar-link"> Dashboard </a> -->
+                <a routerLink="/dashboard" class="navbar-link"> Ecommerce Dashboard  </a>
+              </mat-list-item >
+
+            </mat-list>
+            
+           </mat-expansion-panel>
+
+        </mat-accordion>
+
+        <!-- Ecommerce Accordion -->
+        <mat-accordion>
+          
+          <mat-expansion-panel >
+
+            <mat-expansion-panel-header class="header-color">
+
+              <mat-panel-title>
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i> 
+                E-commerce
+              </mat-panel-title>
+
+            </mat-expansion-panel-header>
+
+            <mat-list>
+              <mat-list-item  style="align-items: center;" >
+                <a routerLink="/client-management" class="navbar-link"> Client-Management  </a>
+              </mat-list-item >
+
+              <mat-list-item style="align-items: center;" >
+                <a routerLink="/product-management" class="navbar-link"> Product-Management  </a>
+              </mat-list-item >
+
+              <mat-list-item style="align-items: center;" >
+                <a routerLink="/delivery-fee" class="navbar-link"> Delivery Fee  </a>
+              </mat-list-item >
+
+              <mat-list-item style="align-items: center;" >
+                <a routerLink="/discount" class="navbar-link"> Discount </a>
+              </mat-list-item >
+
+              <mat-list-item style="align-items: center;" >
+                <a routerLink="/vat" class="navbar-link"> VAT </a>
+              </mat-list-item >
+
+            </mat-list>
+            
+           </mat-expansion-panel>
+
+        </mat-accordion>
+
+        <!-- Radio subsystem accordion -->
+        <mat-accordion>
+          
+          <mat-expansion-panel >
+
+            <mat-expansion-panel-header class="header-color">
+
+              <mat-panel-title>
+                <i class="fa fa-music" aria-hidden="true"></i>
+
+                Radio subsystem
+              </mat-panel-title>
+
+            </mat-expansion-panel-header>
+
+            <mat-list>
+              <mat-list-item style="align-items: center;" >
+                <a routerLink="/adverts" class="navbar-link"> Adverts  </a>
+              </mat-list-item >
+
+              <mat-list-item style="align-items: center;" >
+                <a routerLink="/events" class="navbar-link"> Events </a>
+              </mat-list-item >
+
+              <mat-list-item style="align-items: center;" >
+                <a routerLink="/articles" class="navbar-link"> News Articles  </a>
+              </mat-list-item >
+
+              <mat-list-item style="align-items: center;" >
+                <a routerLink="/radio-shows" class="navbar-link"> Radio Shows </a>
+              </mat-list-item >
+
+              <mat-list-item style="align-items: center;" >
+                <a routerLink="/music-player" class="navbar-link"> Music-Player </a>
+              </mat-list-item >
+
+              <mat-list-item style="align-items: center;" >
+                <a routerLink="/music-submissions" class="navbar-link"> Music Submissions </a>
+              </mat-list-item >
+
+              <mat-list-item style="align-items: center;" >
+                <a routerLink="/music-requests" class="navbar-link"> Music Requests </a>
+              </mat-list-item >
+
+              <mat-list-item style="align-items: center;" >
+                <a routerLink="/music-requests" class="navbar-link"> Invoice Generator </a>
+              </mat-list-item >
+
+            </mat-list>
+            
+           </mat-expansion-panel>
+
+        </mat-accordion>
+
+        <!-- Accounts management accordion -->
+        <mat-accordion>
+          
+          <mat-expansion-panel >
+
+            <mat-expansion-panel-header class="header-color">
+
+              <mat-panel-title>
+                <i class="fa fa-users" aria-hidden="true"></i>
+
+                User Accounts Management
+              </mat-panel-title>
+
+            </mat-expansion-panel-header>
+
+            <mat-list>
+              <mat-list-item style="align-items: center;" >
+                <a routerLink="/adverts" class="navbar-link"> View Users  </a>
+              </mat-list-item >
+
+              <mat-list-item style="align-items: center;" >
+                <a routerLink="/events" class="navbar-link"> View Audit Log </a>
+              </mat-list-item >
+
+            </mat-list>
+            
+           </mat-expansion-panel>
+
+        </mat-accordion>
+        
+        <mat-list>
+          <mat-list-item style="align-items: center;" >
+
+            <a routerLink="/adverts" class="navbar-link"> 
+              <i class="fa fa-user" aria-hidden="true"></i>
+              My Account 
+            </a>
+
+          </mat-list-item >
+
+          <mat-list-item style="align-items: center;" >
+            <a routerLink="/adverts" class="navbar-link"> 
+              <i class="fa fa-sign-out" aria-hidden="true"></i>
+              Log Out  
+            </a>
+          </mat-list-item >
+
+
+        </mat-list>
+        
+      </mat-sidenav>
+
+      <mat-sidenav-content >
+
+        <router-outlet></router-outlet>
+
+      </mat-sidenav-content>
+
+    </mat-sidenav-container>
+  
