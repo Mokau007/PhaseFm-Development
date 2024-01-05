@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PhaseFmApi.Models.Entities;
 
 public partial class BusinessDetail : IDeletable, ICreatable, IUpdatable, IEntityPrimaryKey
 {
-  public int Id { get; set; }
+	[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+	public int Id { get; set; }
 
   public string BusinessName { get; set; } = null!;
 

@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PhaseFmApi.Models.Entities;
 
 public partial class PlayListMusic : IDeletable, ICreatable, IUpdatable, IEntityPrimaryKey
 {
-  public int Id { get; set; }
+	[Key]
+	public int Id { get; set; }
 
   public int PlayListId { get; set; }
 

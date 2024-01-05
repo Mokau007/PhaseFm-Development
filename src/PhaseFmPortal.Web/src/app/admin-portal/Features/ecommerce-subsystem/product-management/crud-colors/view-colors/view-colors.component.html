@@ -1,1 +1,66 @@
-<p>view-colors works!</p>
+
+<h2 style="text-align: center;color:black;">
+    Product Color
+</h2>
+
+
+    <button style="color:black" class="btn add-btn ms-2"(click)="OpenModal()">
+        Add Color
+    </button>
+
+    <span class="float-end me-3">
+            <input type="search" placeholder="Search Product Type" (keyup)="applyFilter($event)">
+    </span>
+
+
+
+<div class="mat-elevation-z8 container-fluid " >
+    <table style="margin-top: 10px;margin-left: 5px; margin-right: 5px;" mat-table [dataSource]="datasource " matSort (matSortChange)="announceSortChange($event)">
+
+        <!-- Name Column -->
+      <ng-container matColumnDef="Name">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by name"> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+  
+      <!-- Description Column -->
+      <ng-container matColumnDef="ColorCode">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by Description"> ColorCode </th>
+        <td mat-cell *matCellDef="let element"> <input type="color"  value={{element.colorCode}} disabled >  </td>
+      </ng-container>
+
+  
+      <!-- Edit Column -->
+      <ng-container matColumnDef="Edit">
+        <th mat-header-cell *matHeaderCellDef  > Edit </th>
+        <td mat-cell *matCellDef="let element"> 
+            <button class="btn" (click)="EditColor(element.id);OpenEditModal()" style="background-color: white;"><i class="material-icons">edit</i> </button>
+
+        </td>
+      </ng-container>
+  
+      <!-- Delete Column -->
+      <ng-container matColumnDef="Delete">
+        <th mat-header-cell *matHeaderCellDef > Delete </th>
+        <td mat-cell *matCellDef="let element">  
+            <button class="btn" (click)=" RequestToDeleteColor(element.id); OpenDeleteModal()" style="background-color: white;"><i class="material-icons">delete</i> </button> 
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator #paginator
+                    [length]="color.length"
+                   [pageSizeOptions]="[ 3, 5, 10, 20]"
+                   [pageSize]="5"
+                   showFirstLastButtons
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+
+  <br><br><br>
+  <button mat-icon-button  [matTooltip]="toolTipText" class="custom-tooltip">
+    <mat-icon class="extensive-help" >info_outline</mat-icon>
+</button>

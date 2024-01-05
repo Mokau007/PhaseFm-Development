@@ -1,0 +1,38 @@
+<h1 style="text-align: center; padding-top: 20px; color: black">
+    Product Management
+  </h1>
+  
+  <mat-tab-group>
+    <mat-tab label="Products">
+      <ng-template matTabContent>
+        <app-view-products></app-view-products>
+      </ng-template>
+    </mat-tab>
+  
+    <mat-tab label="Product Type">
+      <ng-template matTabContent>
+        <app-view-product-types></app-view-product-types>
+      </ng-template>
+    </mat-tab>
+  
+    <mat-tab label="Product Category">
+      <ng-template matTabContent >
+        <app-view-product-category > </app-view-product-category>
+      </ng-template>
+    </mat-tab>
+  
+    <mat-tab label="Sizes">
+      <ng-template matTabContent>
+        <app-view-sizes></app-view-sizes>
+      </ng-template>
+    </mat-tab>
+  
+    <mat-tab label="Colors">
+      <ng-template matTabContent>
+        <app-view-colors></app-view-colors>
+      </ng-template>
+    </mat-tab>
+  
+   
+  </mat-tab-group>
+  

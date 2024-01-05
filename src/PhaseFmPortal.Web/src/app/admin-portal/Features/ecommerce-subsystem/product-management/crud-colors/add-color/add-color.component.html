@@ -1,1 +1,55 @@
-<p>add-color works!</p>
+
+<h3 mat-dialog-title class="modal-title fw-bolder">
+    
+    Add Color
+    <i class="material-icons" style="cursor: pointer;margin-left: 80%;" (click)="CloseEditModal()">cancel</i>
+</h3>
+
+<div mat-dialog-content class="container-fluid">
+    <div mat-dialog-actions class="row">
+        <div class="col-6 offset-2">
+
+            <div *ngIf="showError" class="alert alert-danger" role="alert" style="width:fit-content">
+                <span [innerHTML]="errorMessage" style="color:red"></span>
+            </div>
+            
+            <form class="form-group" #form="ngForm" (ngSubmit)="AddColor()">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" placeholder="Enter color name"  id="name"
+                    name="name"   [(ngModel)]="color.name"  ngModel #name="ngModel" required  >
+
+                    <div *ngIf="name.errors?.['required'] && name?.touched" class="error" >
+                         Name is required 
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Select a color below:</label>
+                    <input type="color" class="form-control" placeholder="Enter color name"  id="name"
+                    name="name"   [(ngModel)]="color.colorCode"  ngModel #colorCode="ngModel" required  >
+                    <div *ngIf="colorCode.errors?.['required'] && colorCode?.touched" class="error" >
+                        Color selection is required
+                    </div>
+                </div>
+                
+                
+        
+                <div class="float-end">
+                    <button type="button" class="btn btn-outline-primary me-2 "  (click)="CloseEditModal()">
+                        Discard
+                    </button>
+            
+                    <button type="submit"
+                    class="btn btn-primary  "
+                    
+                    [disabled]="
+                      !color.name ||
+                      !color.colorCode
+                      ">Submit</button>
+                      
+                </div>
+            </form>
+        </div>
+    </div>
+
+

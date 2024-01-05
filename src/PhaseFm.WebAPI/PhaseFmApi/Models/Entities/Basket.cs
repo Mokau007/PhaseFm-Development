@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PhaseFmApi.Models.Entities;
 
 public partial class Basket : IDeletable, ICreatable, IUpdatable, IEntityPrimaryKey
 {
-  public int Id { get; set; }
+	[Key]
+	public int Id { get; set; }
 
   public int ProductId { get; set; }
 

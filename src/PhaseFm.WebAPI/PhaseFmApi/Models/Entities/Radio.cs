@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PhaseFmApi.Models.Entities;
 
 public partial class Radio : IDeletable, ICreatable, IUpdatable, IEntityPrimaryKey
 {
+	[Key]
   public int Id { get; set; }
 
   public string Day { get; set; } = null!;

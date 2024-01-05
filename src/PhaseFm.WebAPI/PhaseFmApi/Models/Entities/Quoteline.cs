@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PhaseFmApi.Models.Entities;
 
 public partial class Quoteline : IDeletable, ICreatable, IUpdatable, IEntityPrimaryKey
 {
-  public int Id { get; set; }
+	[Key]
+	public int Id { get; set; }
 
   public int QuotationId { get; set; }
 

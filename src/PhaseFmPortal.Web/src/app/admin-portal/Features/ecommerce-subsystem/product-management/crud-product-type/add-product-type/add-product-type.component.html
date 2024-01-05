@@ -1,1 +1,71 @@
-<p>add-product-type works!</p>
+
+<h3 mat-dialog-title class="modal-title fw-bolder">
+    
+    Add Product Type
+    <i class="material-icons" style="cursor: pointer;margin-left: 80%;" (click)="CloseEditModal()">cancel</i>
+</h3>
+
+<div mat-dialog-content class="container-fluid">
+    <div mat-dialog-actions class="row">
+        <div class="col-6 offset-2">
+
+            <div *ngIf="showError" class="alert alert-danger" role="alert" style="width:fit-content">
+                <span [innerHTML]="errorMessage" style="color:red"></span>
+            </div>
+            
+            <form class="form-group" #form="ngForm" (ngSubmit)="AddProductType()">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" placeholder="Enter Product Type Name"  id="name"
+                    name="name"   [(ngModel)]="productType.name"  ngModel #name="ngModel" required  >
+                    <div *ngIf="name.errors?.['required'] && name?.touched" class="error" >
+                         Name is required 
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea type="text" class="form-control" placeholder="Enter Product Type Description"  id="description"
+                    name="description"   [(ngModel)]="productType.description" ngModel #description="ngModel" required    >
+                    </textarea>
+                    <div *ngIf="description.errors?.['required'] && description?.touched" class="error" >
+                        Description is required
+                    </div>
+                </div>
+                
+                <div lass="mb-3">
+                    <label for="category" class="form-label">Product Category</label>
+                    <br>
+                    <mat-form-field color="accent">
+                        <mat-label>Product Category</mat-label>
+                            <mat-select  name="prodCategory"  (selectionChange)="SelectProductCategory($event.value)" ngModel #Category="ngModel" required >
+                                <mat-option [value]="category.id" *ngFor="let category of productCategory" >
+                                    {{category.name}}
+                                </mat-option>
+
+                            </mat-select>
+                            <mat-error *ngIf="Category.errors?.['required'] && Category?.touched" class="error">
+                                Please select a Discount Type
+                         </mat-error>
+                    </mat-form-field>
+                </div> 
+        
+                <div class="float-end">
+                    <button type="button" class="btn btn-outline-primary me-2 "  (click)="CloseEditModal()">
+                        Discard
+                    </button>
+            
+                    <button type="submit"
+                    class="btn btn-primary  "
+                    
+                    [disabled]="
+                      !productType.name ||
+                      !productType.description
+                      ">Submit</button>
+                      
+                </div>
+            </form>
+        </div>
+    </div>
+
+

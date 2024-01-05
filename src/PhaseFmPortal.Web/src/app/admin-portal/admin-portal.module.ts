@@ -63,6 +63,11 @@ import { DeleteShowComponent } from './Features/radio-subsystem/crud-show/delete
 import { ViewShowsComponent } from './Features/radio-subsystem/crud-show/view-shows/view-shows.component';
 import { EditShowComponent } from './Features/radio-subsystem/crud-show/edit-show/edit-show.component';
 import { MaterialModule } from './Shared/AngularMaterial/material.module';
+import { ProductManagementTabsComponent } from './Features/ecommerce-subsystem/product-management/product-management-tabs/product-management-tabs.component';
+import { HttpClient } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SuccessAlertComponent } from './Shared/Alerts/success-alert/success-alert.component';
+import { ErrorAlertComponent } from './Shared/Alerts/error-alert/error-alert.component';
 
 
 
@@ -126,12 +131,18 @@ import { MaterialModule } from './Shared/AngularMaterial/material.module';
     AddShowComponent,
     DeleteShowComponent,
     ViewShowsComponent,
-    EditShowComponent
+    EditShowComponent,
+    ProductManagementTabsComponent,
+    SuccessAlertComponent,
+    ErrorAlertComponent
   ],
   imports: [
     CommonModule,
     AdminPortalRoutingModule,
     MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
+    
     
   ]
 })

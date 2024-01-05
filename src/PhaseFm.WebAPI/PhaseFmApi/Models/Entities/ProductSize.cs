@@ -1,7 +1,10 @@
-﻿namespace PhaseFmApi.Models.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace PhaseFmApi.Models.Entities
 {
   public class ProductSize
   {
+		[Key]
 		public int Id { get; set; }
 
 		public int ProductId { get; set; }

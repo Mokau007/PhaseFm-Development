@@ -1,0 +1,29 @@
+//View styling
+mat-paginator {
+    background-color:  #dcd8d8;
+      color: black;
+    }
+      
+    .custom-tooltip {
+      position: absolute;
+      bottom: 10px; /* Adjust the distance from the bottom as needed */
+      right: 25px; /* Adjust the distance from the right as needed */
+      max-width: 800px;; /* Set a maximum width for responsiveness */
+      max-height: max-content;
+      // background-color: #333; /* Customize background color */
+      color: rgb(174, 12, 12); /* Customize text color */
+      padding: 8px; /* Add padding for better appearance */
+      border-radius: 4px; /* Add rounded corners */
+      z-index: 1000; /* Ensure it appears above other content */
+      text-overflow: ellipsis;
+    }
+  .extensive-help{
+      font-size: 35px;
+      width: 35px;
+      height: 35px;
+  }
+  
+  .add-btn{
+    background-color: #0093E9;
+    color: white;
+  }

@@ -25,7 +25,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Address", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("City")
                         .IsRequired()
@@ -84,7 +87,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Article", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ArticleContent")
                         .IsRequired()
@@ -114,7 +120,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Basket", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -150,7 +159,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.BusinessDetail", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("BusinessName")
                         .IsRequired()
@@ -194,7 +206,14 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Color", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ColorCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -221,7 +240,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Delivery", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -247,7 +269,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Discount", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -273,7 +298,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Employee", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
                         .IsRequired()
@@ -325,7 +353,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.EmployeeType", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -356,7 +387,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Event", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("date");
@@ -391,7 +425,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Letter", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -431,7 +468,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Music", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("AlbumName")
                         .IsRequired()
@@ -491,7 +531,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.MusicRequest", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ArtistName")
                         .IsRequired()
@@ -555,7 +598,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.MusicRequestStatus", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -588,7 +634,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.MusicSubmission", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ArtistName")
                         .IsRequired()
@@ -667,7 +716,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.MusicSubmissionStatus", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -700,7 +752,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Order", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(10, 0)");
@@ -747,7 +802,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.OrderReceivedStatus", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -779,7 +837,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.OrderStatus", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -811,7 +872,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Orderline", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -842,7 +906,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.PlayListMusic", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -875,7 +942,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Playlist", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -906,7 +976,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<decimal>("CostPrice")
                         .HasColumnType("decimal(10, 0)");
@@ -957,7 +1030,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.ProductCategory", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -989,7 +1065,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.ProductColor", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("ColorId")
                         .HasColumnType("int");
@@ -1057,7 +1136,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.ProductType", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -1094,7 +1176,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Quotation", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ClientAddress")
                         .IsRequired()
@@ -1128,7 +1213,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Quoteline", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<decimal>("CostPerUnit")
                         .HasColumnType("decimal(10, 0)");
@@ -1166,7 +1254,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Radio", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -1194,7 +1285,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.RadioShow", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -1227,7 +1321,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Show", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -1278,6 +1375,10 @@ namespace PhaseFmApi.Migrations
                     b.Property<DateTime?>("DateUpdated")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -1293,7 +1394,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.User", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -1341,7 +1445,10 @@ namespace PhaseFmApi.Migrations
             modelBuilder.Entity("PhaseFmApi.Models.Entities.Vat", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");

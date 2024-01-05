@@ -107,7 +107,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("address", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.PostalCode).HasMaxLength(45);
 
 	  entity.HasOne(d => d.User).WithMany(p => p.Addresses)
@@ -122,7 +122,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("article", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.DateGenerated).HasColumnType("date");
 	});
 
@@ -132,7 +132,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("basket", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
 	  entity.HasOne(d => d.Product).WithMany(p => p.Baskets)
 			  .HasForeignKey(d => d.ProductId)
@@ -151,7 +151,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("businessdetail", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.PostalCode).HasMaxLength(45);
 	});
 
@@ -161,7 +161,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("color", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	});
 
 	modelBuilder.Entity<Delivery>(entity =>
@@ -170,7 +170,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("delivery", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.Price).HasColumnType("decimal(10, 0)");
 	});
 
@@ -180,7 +180,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("discount", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.Percentage).HasColumnType("decimal(10, 0)");
 	});
 
@@ -190,7 +190,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("employee", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.Email).HasMaxLength(1000);
 	  entity.Property(e => e.FirstName).HasMaxLength(1000);
 	  entity.Property(e => e.LastName).HasMaxLength(1000);
@@ -208,7 +208,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("employeetype", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	});
 
 	modelBuilder.Entity<Event>(entity =>
@@ -217,7 +217,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("event", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.Date).HasColumnType("date");
 	  entity.Property(e => e.Description).HasColumnType("text");
 	  entity.Property(e => e.Name).HasMaxLength(4000);
@@ -229,7 +229,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("letter", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.DateGenerated).HasColumnType("date");
 	  entity.Property(e => e.LetterContent).HasColumnType("text");
 	  entity.Property(e => e.RecipientLastName).HasMaxLength(100);
@@ -242,7 +242,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("music", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.AlbumName).HasMaxLength(1000);
 	  entity.Property(e => e.ArtistName).HasMaxLength(1000);
 	  entity.Property(e => e.Composer).HasMaxLength(1000);
@@ -258,7 +258,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("musicrequest", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.ArtistName).HasMaxLength(1000);
 	  entity.Property(e => e.DateRequested).HasColumnType("date");
 	  entity.Property(e => e.Email).HasMaxLength(1000);
@@ -278,7 +278,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("musicrequeststatus", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.Description).HasMaxLength(2000);
 	  entity.Property(e => e.Name).HasMaxLength(1000);
 	});
@@ -289,7 +289,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("musicsubmission", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.ArtistName).HasMaxLength(1000);
 	  entity.Property(e => e.Composer).HasMaxLength(1000);
 	  entity.Property(e => e.Description).HasMaxLength(1000);
@@ -312,7 +312,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("musicsubmissionstatus", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.Description).HasMaxLength(2000);
 	  entity.Property(e => e.Name).HasMaxLength(1000);
 	});
@@ -323,7 +323,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("order", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.Amount).HasColumnType("decimal(10, 0)");
 	  entity.Property(e => e.Date).HasColumnType("date");
 
@@ -349,7 +349,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("orderline", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
 	  entity.HasOne(d => d.Product).WithMany(p => p.Orderlines)
 			  .HasForeignKey(d => d.ProductId)
@@ -363,7 +363,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("orderreceivedstatus", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.Name).HasMaxLength(1000);
 	});
 
@@ -373,7 +373,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("orderstatus", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.Name).HasMaxLength(1000);
 	});
 
@@ -383,7 +383,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("playlist", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	});
 
 	modelBuilder.Entity<PlayListMusic>(entity =>
@@ -392,7 +392,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("playlistmusic", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
 	  entity.HasOne(d => d.Music).WithMany(p => p.Playlistmusics)
 			  .HasForeignKey(d => d.MusicId)
@@ -411,7 +411,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("product", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.CostPrice).HasColumnType("decimal(10, 0)");
 	  entity.Property(e => e.SellingPrice).HasColumnType("decimal(10, 0)");
 
@@ -432,7 +432,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("productcategory", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.Name).HasMaxLength(1000);
 	});
 
@@ -442,7 +442,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("productcolor", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
 	  entity.HasOne(d => d.Color).WithMany(p => p.Productcolors)
 			  .HasForeignKey(d => d.ColorId)
@@ -461,7 +461,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("producttype", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.Name).HasMaxLength(2000);
 
 	  entity.HasOne(d => d.ProductCategory).WithMany(p => p.Producttypes)
@@ -476,7 +476,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("quotation", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.DateCreated).HasColumnType("date");
 	});
 
@@ -486,7 +486,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("quoteline", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.CostPerUnit).HasColumnType("decimal(10, 0)");
 
 	  entity.HasOne(d => d.Quotation).WithMany(p => p.Quotelines)
@@ -501,7 +501,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("radio", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.Day).HasMaxLength(45);
 	});
 
@@ -511,7 +511,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("radioshow", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
 	  entity.HasOne(d => d.Radio).WithMany(p => p.Radioshows)
 			  .HasForeignKey(d => d.RadioId)
@@ -530,7 +530,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("show", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	});
 
 	modelBuilder.Entity<User>(entity =>
@@ -539,7 +539,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("user", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.Email).HasMaxLength(255);
 	  entity.Property(e => e.FirstName).HasMaxLength(500);
 	  entity.Property(e => e.LastName).HasMaxLength(500);
@@ -553,7 +553,7 @@ public partial class PhaseFmContext : DbContext
 
 	  entity.ToTable("vat", "phasefm");
 
-	  entity.Property(e => e.Id).ValueGeneratedNever();
+	  entity.Property(e => e.Id).ValueGeneratedOnAdd();
 	  entity.Property(e => e.Percentage).HasColumnType("decimal(10, 0)");
 	});
 
