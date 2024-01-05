@@ -9,7 +9,9 @@ public partial class Vat : IDeletable, ICreatable, IUpdatable, IEntityPrimaryKey
 	[Key]
 	public int Id { get; set; }
 
-  public decimal? Percentage { get; set; }
+  public decimal Percentage { get; set; }
+
+	public bool IsActive { get; set; } = false;
 
 	public DateTime? DateUpdated { get; set; }
 	public DateTime DateCreated { get; set; }
