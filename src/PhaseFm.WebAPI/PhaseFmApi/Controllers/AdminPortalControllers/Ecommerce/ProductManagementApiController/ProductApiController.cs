@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace PhaseFmApi.Controllers.AdminPortalControllers.ProductManagementApiController
+namespace PhaseFmApi.Controllers.AdminPortalControllers.Ecommerce.ProductManagementApiController
 {
   [Route("api/[controller]")]
   [ApiController]

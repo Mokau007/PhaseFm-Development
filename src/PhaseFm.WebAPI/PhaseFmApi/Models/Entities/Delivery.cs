@@ -11,6 +11,8 @@ public partial class Delivery : IDeletable, ICreatable, IUpdatable, IEntityPrima
 
   public decimal Price { get; set; }
 
+	public bool IsActive { get; set; }
+
 	public DateTime? DateUpdated { get; set; }
 	public DateTime DateCreated { get; set; }
 	public bool IsDeleted { get; set; } = false;
