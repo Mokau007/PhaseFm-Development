@@ -2,12 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PhaseFmApi.Models.Entities;
-using PhaseFmApi.Models.ViewModel;
+using PhaseFmApi.Models.ViewModel.ProductManagementViewModels;
 using PhaseFmApi.Repository;
 
 namespace PhaseFmApi.Controllers.AdminPortalControllers.ProductManagementApiController
 {
-	[Route("api/size")]
+  [Route("api/size")]
 	[ApiController]
 	public class SizeApiController : ControllerBase
 	{
