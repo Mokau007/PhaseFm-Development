@@ -1,0 +1,51 @@
+
+<h3 mat-dialog-title class="modal-title fw-bolder">
+    
+    Edit Discount
+    <i class="material-icons" style="cursor: pointer;margin-left: 80%;" (click)="CloseEditModal()">cancel</i>
+</h3>
+
+<div mat-dialog-content class="container-fluid">
+    <div mat-dialog-actions class="row">
+        <div class="col-6 offset-2">
+
+            <div *ngIf="showError" class="alert alert-danger" role="alert" style="width:fit-content">
+                <span [innerHTML]="errorMessage" style="color:red"></span>
+            </div>
+            
+            <form class="form-group" #form="ngForm" (ngSubmit)="EditDiscount()">
+                <div class="mb-3">
+                    <label for="discount" class="form-label">Discount Percentage</label>
+                    <input type="number" class="form-control" placeholder="Enter discount percentge"  id="discount"
+                    name="discount"   [(ngModel)]="discount.percentage"  ngModel #percentage="ngModel" required  >
+
+                    <div *ngIf="percentage.errors?.['required'] " class="error" >
+                         Discount Percentage is required 
+                    </div>
+
+                    <div *ngIf="discount.percentage <= 0 || discount.percentage  > 100   " class="error">
+                        Please enter a valid percentage 
+                    </div>
+
+                </div>
+               
+                <div class="float-end">
+                    <button type="button" class="btn btn-outline-primary me-2 "  (click)="CloseEditModal()">
+                        Discard
+                    </button>
+            
+                    <button type="submit"
+                    class="btn btn-primary  "
+                    
+                    [disabled]="
+                      !discount.percentage ||
+                       discount.percentage <=0 ||
+                       discount.percentage > 100
+                      ">Submit</button>
+                      
+                </div>
+            </form>
+        </div>
+    </div>
+
+

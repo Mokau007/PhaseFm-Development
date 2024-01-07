@@ -5,9 +5,9 @@ import { AdminPortalRoutingModule } from './admin-portal-routing.module';
 import { PortalNavComponent } from './Core/portal-nav/portal-nav.component';
 import { EcommerceDashboardComponent } from './Features/dashboard/ecommerce-dashboard/ecommerce-dashboard.component';
 import { RadioDashboardComponent } from './Features/dashboard/radio-dashboard/radio-dashboard.component';
-import { DiscountComponent } from './Features/ecommerce-subsystem/discount/discount.component';
-import { VatComponent } from './Features/ecommerce-subsystem/vat/vat.component';
-import { DeliveryComponent } from './Features/ecommerce-subsystem/delivery/delivery.component';
+import { DiscountComponent } from './Features/ecommerce-subsystem/crud-discount/discount/discount.component';
+import { VatComponent } from './Features/ecommerce-subsystem/crud-vat/vat/vat.component';
+import { DeliveryComponent } from './Features/ecommerce-subsystem/crud-delivery/delivery/delivery.component';
 import { AddColorComponent } from './Features/ecommerce-subsystem/product-management/crud-colors/add-color/add-color.component';
 import { ViewColorsComponent } from './Features/ecommerce-subsystem/product-management/crud-colors/view-colors/view-colors.component';
 import { DeleteColorsComponent } from './Features/ecommerce-subsystem/product-management/crud-colors/delete-colors/delete-colors.component';
@@ -68,6 +68,16 @@ import { HttpClient } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SuccessAlertComponent } from './Shared/Alerts/success-alert/success-alert.component';
 import { ErrorAlertComponent } from './Shared/Alerts/error-alert/error-alert.component';
+import { DeleteModalComponent } from './Core/modals/delete-modal/delete-modal.component';
+import { AddDeliveryComponent } from './Features/ecommerce-subsystem/crud-delivery/add-delivery/add-delivery.component';
+import { EditDeliveryComponent } from './Features/ecommerce-subsystem/crud-delivery/edit-delivery/edit-delivery.component';
+import { DeleteDeliveryComponent } from './Features/ecommerce-subsystem/crud-delivery/delete-delivery/delete-delivery.component';
+import { AddDiscountComponent } from './Features/ecommerce-subsystem/crud-discount/add-discount/add-discount.component';
+import { EditDiscountComponent } from './Features/ecommerce-subsystem/crud-discount/edit-discount/edit-discount.component';
+import { DeleteDiscountComponent } from './Features/ecommerce-subsystem/crud-discount/delete-discount/delete-discount.component';
+import { AddVatComponent } from './Features/ecommerce-subsystem/crud-vat/add-vat/add-vat.component';
+import { EditVatComponent } from './Features/ecommerce-subsystem/crud-vat/edit-vat/edit-vat.component';
+import { DeleteVatComponent } from './Features/ecommerce-subsystem/crud-vat/delete-vat/delete-vat.component';
 
 
 
@@ -134,7 +144,17 @@ import { ErrorAlertComponent } from './Shared/Alerts/error-alert/error-alert.com
     EditShowComponent,
     ProductManagementTabsComponent,
     SuccessAlertComponent,
-    ErrorAlertComponent
+    ErrorAlertComponent,
+    DeleteModalComponent,
+    AddDeliveryComponent,
+    EditDeliveryComponent,
+    DeleteDeliveryComponent,
+    AddDiscountComponent,
+    EditDiscountComponent,
+    DeleteDiscountComponent,
+    AddVatComponent,
+    EditVatComponent,
+    DeleteVatComponent
   ],
   imports: [
     CommonModule,

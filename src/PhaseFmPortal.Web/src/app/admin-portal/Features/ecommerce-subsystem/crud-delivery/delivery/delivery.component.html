@@ -1,15 +1,15 @@
 
 <h2 style="text-align: center;color:black;">
-    Product Color
+    Delivery Fee
 </h2>
 
 
-    <button style="color:black" class="btn add-btn ms-2"(click)="OpenModal()">
-        Add Color
+    <button style="color:black" class="btn btn-primary ms-2"(click)="OpenModal()">
+        Add Delivery Fee
     </button>
 
     <span class="float-end me-3">
-            <input type="search" placeholder="Search Colors" (keyup)="applyFilter($event)">
+            <input type="search" placeholder="Search Delivery Fee" (keyup)="applyFilter($event)">
     </span>
 
 
@@ -17,24 +17,26 @@
 <div class="mat-elevation-z8 container-fluid " >
     <table style="margin-top: 10px;margin-left: 5px; margin-right: 5px;" mat-table [dataSource]="datasource " matSort (matSortChange)="announceSortChange($event)">
 
-        <!-- Name Column -->
-      <ng-container matColumnDef="Name">
-        <th mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by name"> Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        <!-- DeliveryFee Column -->
+      <ng-container matColumnDef="Price">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by name"> Delivery Fee </th>
+        <td mat-cell *matCellDef="let element"> {{element.price | currency:'R':'symbol':'1.2-2'}} </td>
       </ng-container>
   
-      <!-- Description Column -->
-      <ng-container matColumnDef="ColorCode">
-        <th mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by Description"> ColorCode </th>
-        <td mat-cell *matCellDef="let element"> <input type="color"  value={{element.colorCode}} disabled >  </td>
+
+      <!-- Activate/Disactivate Column -->
+      <ng-container matColumnDef="Activate">
+        <th mat-header-cell *matHeaderCellDef > Activate/Deactivate Delivery </th>
+        <td mat-cell *matCellDef="let element"> 
+          <mat-slide-toggle [(ngModel)]="element.isActive" (toggleChange)="ActivateDeliveryFee(element.id)">Activated: {{element.isActive}}</mat-slide-toggle>
+        </td>
       </ng-container>
 
-  
       <!-- Edit Column -->
       <ng-container matColumnDef="Edit">
         <th mat-header-cell *matHeaderCellDef  > Edit </th>
         <td mat-cell *matCellDef="let element"> 
-            <button class="btn" (click)="EditColor(element.id);OpenEditModal()" style="background-color: white;"><i class="material-icons">edit</i> </button>
+            <button class="btn" (click)="EditDeliveryFee(element.id);OpenEditModal()" style="background-color: white;"><i class="material-icons">edit</i> </button>
 
         </td>
       </ng-container>
@@ -43,7 +45,7 @@
       <ng-container matColumnDef="Delete">
         <th mat-header-cell *matHeaderCellDef > Delete </th>
         <td mat-cell *matCellDef="let element">  
-            <button class="btn" (click)=" RequestToDeleteColor(element.id); OpenDeleteModal()" style="background-color: white;"><i class="material-icons">delete</i> </button> 
+            <button class="btn" (click)=" RequestToDeleteDeliveryFee(element.id); OpenDeleteModal()" style="background-color: white;"><i class="material-icons">delete</i> </button> 
         </td>
       </ng-container>
   
@@ -52,7 +54,7 @@
     </table>
   
     <mat-paginator #paginator
-                    [length]="color.length"
+                    [length]="deliveryFee.length"
                    [pageSizeOptions]="[ 3, 5, 10, 20]"
                    [pageSize]="5"
                    showFirstLastButtons

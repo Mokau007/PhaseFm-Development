@@ -1,0 +1,50 @@
+
+<h3 mat-dialog-title class="modal-title fw-bolder">
+    
+    Edit Delivery Fee
+    <i class="material-icons" style="cursor: pointer;margin-left: 80%;" (click)="CloseEditModal()">cancel</i>
+</h3>
+
+<div mat-dialog-content class="container-fluid">
+    <div mat-dialog-actions class="row">
+        <div class="col-6 offset-2">
+
+            <div *ngIf="showError" class="alert alert-danger" role="alert" style="width:fit-content">
+                <span [innerHTML]="errorMessage" style="color:red"></span>
+            </div>
+            
+            <form class="form-group" #form="ngForm" (ngSubmit)="EditDeliveryFee()">
+                <div class="mb-3">
+                    <label for="deliveryFee" class="form-label">Delivery Fee:</label>
+                    <input type="number" class="form-control" placeholder="Enter delivery fee"  id="fee"
+                    name="fee"   [(ngModel)]="deliveryFee.price"  ngModel #fee="ngModel" required  >
+
+                    <div *ngIf="fee.errors?.['required'] " class="error" >
+                         Delivery Fee is required 
+                    </div>
+
+                    <div *ngIf="deliveryFee.price<=0" class="error" >
+                        Delivery Fee needs to be greater than 0
+                   </div>
+                </div>
+                
+        
+                <div class="float-end">
+                    <button type="button" class="btn btn-outline-primary me-2 "  (click)="CloseEditModal()">
+                        Discard
+                    </button>
+            
+                    <button type="submit"
+                    class="btn btn-primary  "
+                    
+                    [disabled]="
+                      !deliveryFee.price ||
+                      deliveryFee.price<=0
+                      ">Submit</button>
+                      
+                </div>
+            </form>
+        </div>
+    </div>
+
+

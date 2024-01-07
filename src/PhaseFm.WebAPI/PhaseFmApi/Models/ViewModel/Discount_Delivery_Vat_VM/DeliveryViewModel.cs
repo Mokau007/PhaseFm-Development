@@ -1,11 +1,12 @@
 ﻿namespace PhaseFmApi.Models.ViewModel.Discount_Delivery_Vat_VM
 {
-  public class VatViewModel
-  {
-		public int Id { get; set; }
+	public class DeliveryViewModel
+	{
+		public int Id { get; set; } 
 
-		public decimal Percentage { get; set; }
+		public decimal Price { get; set; }
 
 		public bool IsActive { get; set; } = false;
+
 	}
 }

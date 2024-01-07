@@ -35,12 +35,12 @@ $PhaseFm-Admin-Portal-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
+@import './assets/Styling/AdditionalStyle.css';
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.tital-modal{
-  font-weight: bold;
-}
+
 
 //form-input validation error styling
 textarea.ng-invalid.ng-touched {
@@ -142,5 +142,6 @@ color: red;
 	margin: 100px auto;
 }
 
+//
 
 

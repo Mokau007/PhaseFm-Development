@@ -2,5 +2,8 @@
 {
   public class DiscountViewModel
   {
-  }
+		public int Id { get; set; }
+
+		public decimal Percentage { get; set; }
+	}
 }

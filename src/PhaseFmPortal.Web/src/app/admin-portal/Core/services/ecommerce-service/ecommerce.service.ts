@@ -8,6 +8,9 @@ import { ProductType } from 'src/app/admin-portal/Shared/Models/Ecommerce/produc
 import { Size } from 'src/app/admin-portal/Shared/Models/Ecommerce/size';
 import { ProductSize } from 'src/app/admin-portal/Shared/Models/Ecommerce/product-size';
 import { ProductColor } from 'src/app/admin-portal/Shared/Models/Ecommerce/product-color';
+import { Discount } from 'src/app/admin-portal/Shared/Models/Ecommerce/discount';
+import { DeliveryFee } from 'src/app/admin-portal/Shared/Models/Ecommerce/delivery-fee';
+import { VAT } from 'src/app/admin-portal/Shared/Models/Ecommerce/vat';
 
 @Injectable({
   providedIn: 'root'
@@ -175,5 +178,88 @@ export class EcommerceService {
    updateProductColor(productColor: ProductColor) {
      return this.parentService.update<ProductColor>(`${this.ProductColor_Endpoint}/${productColor.id}`, productColor);
    }
+
+    // CRUD Discount  endpoint requests
+    private Discount_Endpoint = 'discount';
+    getAllDiscount() {
+      return this.parentService.get<Discount[]>(this.Discount_Endpoint);
+    }
+  
+    getDiscount(Id: number) {
+      return this.parentService.get<Discount>(this.Discount_Endpoint, Id);
+    }
+  
+    createDiscount(discount: Discount) {
+      return this.parentService.create<Discount>(this.Discount_Endpoint, discount);
+    }
+  
+    deleteDiscount(Id: number) {
+      return this.parentService.delete<Discount>(`${this.Discount_Endpoint}/${Id}`);
+    }
+  
+    updateDiscount(discount: Discount) {
+      return this.parentService.update<Discount>(`${this.Discount_Endpoint}/${discount.id}`, discount);
+    }
+
+   
+
+    // CRUD Delivery http requests
+    private Delivery_Endpoint = 'delivery-fee';
+    private ActivateDeliveryEndpoint =  'delivery-fee/activate-delivery'
+
+    getAllDelivery() {
+      return this.parentService.get<DeliveryFee[]>(this.Delivery_Endpoint);
+    }
+  
+    getDelivery(Id: number) {
+      return this.parentService.get<DeliveryFee>(this.Delivery_Endpoint, Id);
+    }
+  
+    createDelivery(delivery: DeliveryFee) {
+      return this.parentService.create<DeliveryFee>(this.Delivery_Endpoint, delivery);
+    }
+  
+    deleteDelivery(Id: number) {
+      return this.parentService.delete<DeliveryFee>(`${this.Delivery_Endpoint}/${Id}`);
+    }
+  
+    updateDelivery(delivery: DeliveryFee) {
+      return this.parentService.update<DeliveryFee>(`${this.Delivery_Endpoint}/${delivery.id}`, delivery);
+    }
+
+    activateDelivery(Id: number) {
+      return this.parentService.update(`${this.ActivateDeliveryEndpoint}/${Id}`, Id)
+    }
+
+    // CRUD Vat http requests
+    private Vat_Endpoint = 'vat';
+    private ActivateVatEndpoint =  'vat/activate-vat'
+
+    getAllVat() {
+      return this.parentService.get<VAT[]>(this.Vat_Endpoint);
+    }
+  
+    getVat(Id: number) {
+      return this.parentService.get<VAT>(this.Vat_Endpoint, Id);
+    }
+  
+    createVat(vat: VAT) {
+      return this.parentService.create<VAT>(this.Vat_Endpoint, vat);
+    }
+  
+    deleteVat(Id: number) {
+      return this.parentService.delete<VAT>(`${this.Vat_Endpoint}/${Id}`);
+    }
+  
+    updateVat(vat: VAT) {
+      return this.parentService.update<VAT>(`${this.Vat_Endpoint}/${vat.id}`, vat);
+    }
+
+    activateVat(Id: number) {
+      return this.parentService.update(`${this.ActivateVatEndpoint}/${Id}`, Id)
+    }
+
+    
+   
 
   }
